@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import {
+  Badge,
   Box,
   Center,
   Container,
@@ -9,9 +10,10 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { IFood } from "../pages/food";
 
 interface IProps {
-  food?: string;
+  food?: IFood;
 }
 
 const Header: FC<IProps> = ({ food }) => {
@@ -26,11 +28,18 @@ const Header: FC<IProps> = ({ food }) => {
         </Center>
 
         {food && (
-          <Center>
-            <Heading as="h1" size="2xl">
-              {food}?
-            </Heading>
-          </Center>
+          <>
+            <Center>
+              <Heading as="h1" size="2xl">
+                {food.food}?
+              </Heading>
+            </Center>
+            {/* <Center>
+              <Badge colorScheme="green" fontSize="2xl" ml="1em">
+                {food.status}
+              </Badge>
+            </Center> */}
+          </>
         )}
       </Box>
       <Image

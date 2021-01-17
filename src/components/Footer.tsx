@@ -8,7 +8,7 @@ interface IProps {
 
 const Footer: FC<IProps> = ({ showSearch = true }) => {
   return (
-    <Box p="1em" height="2em" mt="-2em">
+    <Box p="1em" height="2em" mt="-4em">
       <Center>
         <Text size="xs" as="i">
           Disclaimer: Not a veterinary specialist and not responsible for the

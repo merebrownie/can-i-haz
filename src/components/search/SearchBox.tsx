@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC } from "react"
+import React, { ChangeEvent, FC } from "react";
 import {
   Box,
   FormControl,
@@ -7,15 +7,15 @@ import {
   InputGroup,
   InputRightElement,
   theme,
-} from "@chakra-ui/react"
-import { FiSearch, FiXCircle } from "react-icons/fi"
+} from "@chakra-ui/react";
+import { FiSearch, FiXCircle } from "react-icons/fi";
 
 interface IProps {
-  active: boolean
-  handleFocus: any
-  handleClose: any
-  refine: any
-  currentRefinement: any
+  active: boolean;
+  handleFocus: any;
+  handleClose: any;
+  refine: any;
+  currentRefinement: any;
 }
 
 const SearchBox: FC<IProps> = ({
@@ -28,9 +28,9 @@ const SearchBox: FC<IProps> = ({
   return (
     <FormControl
       mb="0"
-      onKeyDown={e => {
+      onKeyDown={(e) => {
         if (e.key === "Escape" || e.key === "Esc") {
-          handleClose()
+          handleClose();
         }
       }}
       w="100%"
@@ -39,7 +39,8 @@ const SearchBox: FC<IProps> = ({
         <Input
           className="SearchInput"
           type="text"
-          color="grey.300"
+          backgroundColor="white"
+          color="gray.500"
           placeholder="Search"
           aria-label="Search"
           onChange={(e: ChangeEvent<any>) => refine(e.target.value)}
@@ -63,7 +64,7 @@ const SearchBox: FC<IProps> = ({
         />
       </InputGroup>
     </FormControl>
-  )
-}
+  );
+};
 
-export default SearchBox
+export default SearchBox;

@@ -2,6 +2,8 @@ import { Badge, Box, Heading, Text } from "@chakra-ui/react";
 import { Link } from "gatsby";
 import React from "react";
 import { Highlight, Snippet } from "react-instantsearch-dom";
+import { STATUS } from "../../data";
+import Status from "../Status";
 
 export interface IHit {
   food: string;
@@ -42,7 +44,7 @@ const Hit = ({ hit, onClick }: { hit: IHit; onClick: () => void }) => (
     <Link to={`/food?name=${hit.food.replaceAll(" ", "-")}`} onClick={onClick}>
       <Text fontWeight="bold" size="sm">
         <Highlight attribute="food" hit={hit} tagName="mark" />
-        <Badge ml="2em">{hit.status}</Badge>
+        <Status status={hit.status} fontSize="sm" />
       </Text>
     </Link>
   </Box>

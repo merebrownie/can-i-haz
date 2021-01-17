@@ -34,7 +34,6 @@ interface IProps {
 
 const SearchBar = ({ refine, currentRefinement }: IProps) => {
   const { active, handleFocus, handleClose } = useSearchActivity(refine);
-  console.log({ active });
   return (
     <>
       <Box d={"flex"} w="100%">

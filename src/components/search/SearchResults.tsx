@@ -1,10 +1,14 @@
 import { Box, Text } from "@chakra-ui/react";
-import React from "react";
-import { connectHits } from "react-instantsearch-dom";
+import React, { FC } from "react";
+import { connectHits, Hits } from "react-instantsearch-dom";
 import Hit, { IHit } from "./Hit";
 import Stats from "./stats";
 
-const SearchResults = ({ hits, handleClose }) => {
+interface IProps {
+  hits: any[];
+  handleClose: () => void;
+}
+const SearchResults: FC<IProps> = ({ hits, handleClose }) => {
   return (
     <Box
       backgroundColor="blue.400"

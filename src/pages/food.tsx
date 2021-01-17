@@ -5,9 +5,11 @@ import Nav from "../components/Nav";
 import data, { STATUS } from "../data";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Status from "../components/Status";
+import NotFound from "../components/NotFound";
 
-interface IFood {
-  id: string;
+export interface IFood {
+  slug: string;
   food: string;
   status: STATUS;
   result: string;
@@ -18,38 +20,25 @@ interface IProps {
 }
 
 const Food: FC<IProps> = (props) => {
-  const name = props.location.search.split("=")[1].replaceAll("-", " ");
+  const name = props.location?.search?.split("=")[1]?.replaceAll("-", " ");
   const thisFood = data.find((f) => f.food === name);
-  console.log({ thisFood }, thisFood?.food);
   return (
     <>
       <main style={{ height: "100vh" }}>
         <title>Can I Haz?</title>
         <Nav />
-        <Header food={thisFood !== undefined ? thisFood.food : "nope"} />
+        <Header food={thisFood !== undefined ? thisFood : undefined} />
         {thisFood ? (
           <Box pt="2em" pb="2em">
             <Center>
-              <Heading as="h2" size="xl">
-                {thisFood.food}
-                <Badge colorScheme="green" fontSize="2xl" ml="1em">
-                  {thisFood.status}
-                </Badge>
-              </Heading>
+              <Status status={thisFood.status} />
             </Center>
             <Center>
-              <Text>{thisFood.result}</Text>
+              <Text fontSize="xl">{thisFood.result}</Text>
             </Center>
           </Box>
         ) : (
-          <>
-            <Center>
-              <Heading>Ruh-Roh</Heading>
-            </Center>
-            <Center>
-              <Text>Food not found :(</Text>
-            </Center>
-          </>
+          <NotFound />
         )}
       </main>
       <footer>
