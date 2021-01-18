@@ -13,7 +13,7 @@ const Footer: FC<IProps> = ({ showSearch = true }) => {
         <Text size="xs" as="i">
           Disclaimer: Not a veterinary specialist and not responsible for the
           accuracy of this information. All data obtained from{" "}
-          <Link to="https://www.healthline.com/nutrition/human-foods-for-dogs">
+          <Link src="https://www.healthline.com/nutrition/human-foods-for-dogs">
             Healthline
           </Link>
           .

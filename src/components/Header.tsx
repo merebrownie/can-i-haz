@@ -10,14 +10,13 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { IFood } from "../pages/food";
+import { IFood } from "../templates/food";
 
 interface IProps {
   food?: IFood;
 }
 
 const Header: FC<IProps> = ({ food }) => {
-  console.log({ food });
   return (
     <Center>
       <Box>
@@ -31,7 +30,7 @@ const Header: FC<IProps> = ({ food }) => {
           <>
             <Center>
               <Heading as="h1" size="2xl">
-                {food.food}?
+                {food.name}?
               </Heading>
             </Center>
             {/* <Center>

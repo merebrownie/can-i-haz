@@ -21,7 +21,9 @@ const SearchResults: FC<IProps> = ({ hits, handleClose }) => {
     >
       <Stats />
       {hits.length ? (
-        hits.map((hit) => <Hit key={hit.id} hit={hit} onClick={handleClose} />)
+        hits.map((hit) => (
+          <Hit key={hit.slug} hit={hit} onClick={handleClose} />
+        ))
       ) : (
         <Text>No Results</Text>
       )}

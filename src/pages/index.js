@@ -11,7 +11,7 @@ const IndexPage = (props) => {
     <>
       <main style={{ height: "100vh" }}>
         <title>Can I Haz?</title>
-        <Nav showSearch={false} />
+        <Nav />
         <Box>
           <Header />
           <Center>

@@ -1,3 +1,44 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+// gatsby-config.js
+const myQuery = `{
+  pages: allSitePage {
+    nodes {
+      # try to find a unique id for each node
+      # if this field is absent, it's going to
+      # be inserted by Algolia automatically
+      # and will be less simple to update etc.
+      objectID: id
+      path
+      context {
+        status
+        result
+        name
+        slug
+      }
+      internal {
+        type
+        contentDigest
+        owner
+      }
+    }
+  }
+}`;
+
+const queries = [
+  {
+    query: myQuery,
+    transformer: ({ data }) => data.pages.nodes, // optional
+    indexName: "pages", // overrides main index name, optional
+    settings: {
+      // optional, any index settings
+    },
+    matchFields: ["context.name", "context.status"], // Array<String> overrides main match fields, optional
+  },
+];
+
 module.exports = {
   siteMetadata: {
     title: "Can I Haz?",
@@ -51,15 +92,15 @@ module.exports = {
         // Tip: use Search API key with GATSBY_ prefix to access the service from within components
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME, // for all queries
-        // queries,
+        queries,
         chunkSize: 10000, // default: 1000
         settings: {
           // optional, any index settings
         },
         enablePartialUpdates: true, // default: false
-        matchFields: ["slug", "modified"], // Array<String> default: ['modified']
+        matchFields: ["context.name", "context.status"], // Array<String> default: ['modified']
         concurrentQueries: false, // default: true
-        skipIndexing: true, // default: false, useful for e.g. preview deploys or local development
+        // skipIndexing: true, // default: false, useful for e.g. preview deploys or local development
       },
     },
   ],
