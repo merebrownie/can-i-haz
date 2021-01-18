@@ -65,9 +65,8 @@ module.exports = {
         portalZIndex: 40,
       },
     },
-    // 'gatsby-plugin-sharp',
-    // 'gatsby-plugin-react-helmet',
-    // 'gatsby-plugin-sitemap',
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -83,6 +82,7 @@ module.exports = {
       },
       __key: "images",
     },
+    // "gatsby-plugin-sitemap",
     {
       // This plugin must be placed last in your list of plugins to ensure that it can query all the GraphQL data
       resolve: `gatsby-plugin-algolia`,
@@ -97,7 +97,7 @@ module.exports = {
         settings: {
           // optional, any index settings
         },
-        enablePartialUpdates: true, // default: false
+        // enablePartialUpdates: true, // default: false
         matchFields: ["context.name", "context.status"], // Array<String> default: ['modified']
         concurrentQueries: false, // default: true
         // skipIndexing: true, // default: false, useful for e.g. preview deploys or local development
