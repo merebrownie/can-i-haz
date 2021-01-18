@@ -45,7 +45,6 @@ export interface IHit {
 }
 
 const Hit = ({ hit, onClick }: { hit: IHit; onClick: () => void }) => {
-  console.log({ hit });
   return (
     <Box p="1em">
       <Link to={`/${hit.context?.slug}`} onClick={onClick}>

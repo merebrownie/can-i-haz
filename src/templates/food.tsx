@@ -1,5 +1,13 @@
 import React, { FC } from "react";
-import { Heading, Text, Center, Stack, Badge, Box } from "@chakra-ui/react";
+import {
+  Heading,
+  Text,
+  Center,
+  Stack,
+  Badge,
+  Box,
+  Container,
+} from "@chakra-ui/react";
 import Search from "../components/search/index";
 import Nav from "../components/Nav";
 // import jsonData from "./data";
@@ -23,7 +31,6 @@ interface IProps {
 
 export default ({ data, location }: IProps) => {
   const name = location?.search?.split("=")[1]?.replaceAll("-", " ");
-  // const thisFood = data.find((f) => f.name === name) || jsonData[0];
   const thisFood = data.allSitePage.edges[0].node.context;
   return (
     <>
@@ -36,9 +43,11 @@ export default ({ data, location }: IProps) => {
             <Center>
               <Status status={thisFood.status} />
             </Center>
-            <Center>
-              <Text fontSize="xl">{thisFood.result}</Text>
-            </Center>
+            <Container>
+              <Center>
+                <Text fontSize="xl">{thisFood.result}</Text>
+              </Center>
+            </Container>
           </Box>
         ) : (
           <NotFound />

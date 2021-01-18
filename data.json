@@ -30,6 +30,30 @@
     "result": "Limit, high amounts of salt can cause fatal salt poisoning or water deprivation."
   },
   {
+    "slug": "bacon",
+    "name": "bacon",
+    "status": "never",
+    "result": "Never, bacon is typically high in salt, which can be harmful to dogs."
+  },
+  {
+    "slug": "ham",
+    "name": "ham",
+    "status": "never",
+    "result": "Never, processed ham is typically high in salt, which can be harmful to dogs."
+  },
+  {
+    "slug": "cooked-pork",
+    "name": "cooked pork",
+    "status": "yes",
+    "result": "Yes, cooked pork without any added spices is safe for dogs."
+  },
+  {
+    "slug": "raw-pork",
+    "name": "raw pork",
+    "status": "no",
+    "result": "No, raw or undercooked pork could contain bacteria that can make dogs sick."
+  },
+  {
     "slug": "peanut-butter",
     "name": "peanut butter",
     "status": "yes",
@@ -64,6 +88,18 @@
     "name": "cheese",
     "status": "limit",
     "result": "Limited, cheese is safe for dogs in small quantities, but it can cause digestive issues."
+  },
+  {
+    "slug": "toothpaste",
+    "name": "toothpaste",
+    "status": "never",
+    "result": "No, toothpaste often contains xylitol and other chemicals that could cause illness and even death. Always use toothpaste designed for dogs."
+  },
+  {
+    "slug": "coconut",
+    "name": "coconut",
+    "status": "limit",
+    "result": "Limit, coconut is safe for dogs, but is high in fat and calories."
   },
   {
     "slug": "blueberries",
