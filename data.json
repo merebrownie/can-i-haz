@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "apple",
+    "name": "apple",
+    "status": "yes",
+    "result": "Safe, but be sure to remove the seeds."
+  },
+  {
+    "slug": "carrots",
+    "name": "carrots",
+    "status": "yes",
+    "result": "Yes, both raw and cooked carrots are safe, but be sure to cut into small pieces to prevent choking."
+  },
+  {
+    "slug": "grapes",
+    "name": "grapes",
+    "status": "never",
+    "result": "No, grapes contain toxic compounds and even small amounts can make your dog sick, causing kidney failure and even death."
+  },
+  {
+    "slug": "raisins",
+    "name": "raisins",
+    "status": "never",
+    "result": "No, raisins contain toxic compounds and even small amounts can make your dog sick, causing kidney failure and even death."
+  },
+  {
+    "slug": "salt",
+    "name": "salt",
+    "status": "limit",
+    "result": "Limit, high amounts of salt can cause fatal salt poisoning or water deprivation."
+  },
+  {
+    "slug": "peanut-butter",
+    "name": "peanut butter",
+    "status": "yes",
+    "result": "Yes, plain, unsalted peanut butter is safe, but in moderation as it's high in fat and calories it could cause weight gain"
+  },
+  {
+    "slug": "cooked-eggs",
+    "name": "cooked eggs",
+    "status": "yes",
+    "result": "Yes, cooked eggs are both safe and nutritious for dogs."
+  },
+  {
+    "slug": "raw-eggs",
+    "name": "raw eggs",
+    "status": "never",
+    "result": "No, even if your dog doesn't get sick, they could spread the germs to you and other humans."
+  },
+  {
+    "slug": "cooked-salmon",
+    "name": "cooked salmon",
+    "status": "yes",
+    "result": "Yes, cooked, boneless salmon is safe and nutritious for dogs."
+  },
+  {
+    "slug": "chocolate",
+    "name": "chocolate",
+    "status": "never",
+    "result": "No, chocolate contains stimulants that could cause vomiting, diarrhea, and death."
+  },
+  {
+    "slug": "cheese",
+    "name": "cheese",
+    "status": "limit",
+    "result": "Limited, cheese is safe for dogs in small quantities, but it can cause digestive issues."
+  },
+  {
+    "slug": "blueberries",
+    "name": "blueberries",
+    "status": "yes",
+    "result": "Yes, blueberries are safe and nutritious for dogs to eat."
+  }
+]
