@@ -43,7 +43,7 @@ export default ({ data, location }: IProps) => {
             <Center>
               <Status status={thisFood.status} />
             </Center>
-            <Container>
+            <Container mt="1em">
               <Center>
                 <Text fontSize="xl">{thisFood.result}</Text>
               </Center>

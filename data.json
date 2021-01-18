@@ -1,7 +1,7 @@
 [
   {
-    "slug": "apple",
-    "name": "apple",
+    "slug": "apples",
+    "name": "apples",
     "status": "yes",
     "result": "Safe, but be sure to remove the seeds."
   },
@@ -57,7 +57,13 @@
     "slug": "peanut-butter",
     "name": "peanut butter",
     "status": "yes",
-    "result": "Yes, plain, unsalted peanut butter is safe, but in moderation as it's high in fat and calories it could cause weight gain"
+    "result": "Yes, plain, unsalted peanut butter is safe, but it's high in fat and calories."
+  },
+  {
+    "slug": "peanuts",
+    "name": "peanuts",
+    "status": "limit",
+    "result": "Limit, plain and unsalted peanuts are safe for dogs to eat, but they are high in fat."
   },
   {
     "slug": "cooked-eggs",
@@ -106,5 +112,125 @@
     "name": "blueberries",
     "status": "yes",
     "result": "Yes, blueberries are safe and nutritious for dogs to eat."
+  },
+  {
+    "slug": "cinnamon",
+    "name": "cinnamon",
+    "status": "limit",
+    "result": "Limit, cinnamon is non-toxic to dogs, but could irritate their mouth or digestive system."
+  },
+  {
+    "slug": "mangoes",
+    "name": "mangoes",
+    "status": "limit",
+    "result": "Limit, mangoes are safe and nutritious for dogs to eat in small quantities. Be sure to remove the skin and pit."
+  },
+  {
+    "slug": "honey",
+    "name": "honey",
+    "status": "limit",
+    "result": "Limit, honey is high in sugar, which can cause weight gain in dogs."
+  },
+  {
+    "slug": "milk",
+    "name": "milk",
+    "status": "limit",
+    "result": "Limit, milk can cause digestive issues including gas, vomiting, and diarrhea in dogs due to lactose intolerance."
+  },
+  {
+    "slug": "turkey",
+    "name": "turkey",
+    "status": "yes",
+    "result": "Yes, plain turkey without added seasonings or sauces is safe for dogs. Be sure to remove the skin and bones."
+  },
+  {
+    "slug": "rice",
+    "name": "rice",
+    "status": "yes",
+    "result": "Yes, plain and cooked rice, either white or brown, is safe for dogs and very easy for them to digest."
+  },
+  {
+    "slug": "beef",
+    "name": "beef",
+    "status": "yes",
+    "result": "Yes, cooked beef without added seasonings or sauces is safe for dogs to eat."
+  },
+  {
+    "slug": "lemons",
+    "name": "lemons",
+    "status": "never",
+    "result": "No, lemons and limes contain psoralen, which can cause vomiting, diarrhea, and even death."
+  },
+  {
+    "slug": "limes",
+    "name": "limes",
+    "status": "never",
+    "result": "No, lemons and limes contain psoralen, which can cause vomiting, diarrhea, and even death."
+  },
+  {
+    "slug": "strawberries",
+    "name": "strawberries",
+    "status": "yes",
+    "result": "Yes, strawberries are safe and nutritious for dogs to eat. Make sure to cut into small pieces."
+  },
+  {
+    "slug": "raw-yeast",
+    "name": "raw yeast",
+    "status": "never",
+    "result": "No, raw yeast dough can expand in dogs' stomachs, causing severe bloating, difficulty breathing, and weakness."
+  },
+  {
+    "slug": "bananas",
+    "name": "banana",
+    "status": "yes",
+    "result": "Yes, bananas are safe and nutritious for dogs to eat."
+  },
+  {
+    "slug": "oranges",
+    "name": "oranges",
+    "status": "limit",
+    "result": "Limit, oranges are nutritious for dogs to eat, but can can digestive issues."
+  },
+  {
+    "slug": "mushrooms",
+    "name": "mushrooms",
+    "status": "yes",
+    "result": "Yes, plain mushrooms bought at a store (not wild mushrooms) and without added seasonings are safe for dogs."
+  },
+  {
+    "slug": "cooked-potatoes",
+    "name": "cooked potatoes",
+    "status": "limit",
+    "result": "Limit, plain and cooked potatoes without added seasonings are safe for dogs, but they are high in carbs."
+  },
+  {
+    "slug": "raw-potatoes",
+    "name": "raw potatoes",
+    "status": "never",
+    "result": "No, raw potatoes contain solanine, a compound toxic to dogs."
+  },
+  {
+    "slug": "celery",
+    "name": "celery",
+    "status": "yes",
+    "result": "Yes, celery is a safe and nutritious for dogs to eat. Be sure to cut into dog size pieces."
+  },
+  {
+    "slug": "cooked-shrimp",
+    "name": "cooked shrimp",
+    "status": "yes",
+    "result": "Yes, cooked shrimp without added seasonings and sauces is safe and nutritious for dogs to eat. Be sure to remove the shell."
+  },
+  {
+    "slug": "raw-shrimp",
+    "name": "raw shrimp",
+    "status": "never",
+    "result": "No, raw shrimp can contain harmful bacteria that can make dogs sick."
+  },
+  {
+    "slug": "cherries",
+    "name": "cherries",
+    "status": "limit",
+    "result": "Limit, pitted cherries are safe for dogs to eat, but can cause upset stomach and diarrhea. Be sure to remove the pits."
   }
 ]
