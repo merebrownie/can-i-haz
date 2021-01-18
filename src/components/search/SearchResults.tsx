@@ -14,10 +14,12 @@ const SearchResults: FC<IProps> = ({ hits, handleClose }) => {
       backgroundColor="blue.400"
       pos="fixed"
       w="100%"
+      height="100%"
       left="0%"
       transition={"bottom 2s ease"}
       color={"white"}
       p="1em"
+      overflow="auto"
     >
       <Stats />
       {hits.length ? (

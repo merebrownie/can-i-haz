@@ -83,6 +83,16 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          process.env.GOOGLE_ANALYTICS_KEY, // Google Analytics / GA
+          // "AW-CONVERSION_ID", // Google Ads / Adwords / AW
+        ],
+      },
+    },
     "gatsby-plugin-sitemap",
     {
       // This plugin must be placed last in your list of plugins to ensure that it can query all the GraphQL data
