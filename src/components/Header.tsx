@@ -45,7 +45,7 @@ const Header: FC<IProps> = ({ food }) => {
       <Image
         src={pup}
         alt="Photo of a light brown dog with a questioning look."
-        boxSize={{ base: "40%", lg: "30%", xl: "20%" }}
+        boxSize={{ base: "40%", md: "30%", lg: "20%" }}
       />
     </Center>
   );
