@@ -11,6 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { IFood } from "../templates/food";
+import pup from "../images/pup.png";
 
 interface IProps {
   food?: IFood;
@@ -42,7 +43,7 @@ const Header: FC<IProps> = ({ food }) => {
         )}
       </Box>
       <Image
-        src="/images/pup.png"
+        src={pup}
         alt="Photo of a light brown dog with a questioning look."
         boxSize={{ base: "40%", lg: "30%" }}
       />
