@@ -31,7 +31,7 @@ const queries = [
   {
     query: myQuery,
     transformer: ({ data }) => data.pages.nodes, // optional
-    indexName: "pages", // overrides main index name, optional
+    indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME, // overrides main index name, optional
     settings: {
       // optional, any index settings
     },
@@ -42,6 +42,7 @@ const queries = [
 module.exports = {
   siteMetadata: {
     title: "Can I Haz?",
+    siteUrl: "https://canihaz.merebrownie.dev",
   },
   plugins: [
     {
@@ -82,7 +83,7 @@ module.exports = {
       },
       __key: "images",
     },
-    // "gatsby-plugin-sitemap",
+    "gatsby-plugin-sitemap",
     {
       // This plugin must be placed last in your list of plugins to ensure that it can query all the GraphQL data
       resolve: `gatsby-plugin-algolia`,
