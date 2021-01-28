@@ -8,12 +8,15 @@ interface IProps {
 
 const Footer: FC<IProps> = ({ showSearch = true }) => {
   return (
-    <Box p="1em" height="2em" mt="-4em">
+    <Box as="footer" p="1em" height="2em" mt="-4em">
       <Center>
         <Text size="xs" as="i">
           Disclaimer: Not a veterinary specialist and not responsible for the
           accuracy of this information. All data obtained from{" "}
-          <Link src="https://www.healthline.com/nutrition/human-foods-for-dogs">
+          <Link
+            href="https://www.healthline.com/nutrition/human-foods-for-dogs"
+            isExternal
+          >
             Healthline
           </Link>
           .

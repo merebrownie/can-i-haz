@@ -8,6 +8,7 @@ import {
   Box,
   Container,
 } from "@chakra-ui/react";
+import { Helmet } from "react-helmet";
 import Search from "../components/search/index";
 import Nav from "../components/Nav";
 // import jsonData from "./data";
@@ -30,12 +31,33 @@ interface IProps {
 }
 
 export default ({ data, location }: IProps) => {
-  const name = location?.search?.split("=")[1]?.replaceAll("-", " ");
   const thisFood = data.allSitePage.edges[0].node.context;
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{`Can I Haz ${thisFood?.name}?`}</title>
+        {thisFood?.status === "yes" && (
+          <meta
+            name="Description"
+            content={`Yes, ${thisFood.name} is safe for dogs to eat.`}
+          />
+        )}
+        {thisFood?.status === "limit" && (
+          <meta
+            name="Description"
+            content={`Limited, ${thisFood.name} is safe for dogs to eat in limited amounts.`}
+          />
+        )}
+        {thisFood?.status === "never" && (
+          <meta
+            name="Description"
+            content={`Never, ${thisFood.name} is never for dogs to eat.`}
+          />
+        )}
+        <link rel="canonical" href="https://canihaz.merebrownie.dev" />
+      </Helmet>
       <main style={{ height: "100vh" }}>
-        <title>Can I Haz?</title>
         <Nav />
         <Header food={thisFood !== undefined ? thisFood : undefined} />
         {thisFood ? (
@@ -53,42 +75,10 @@ export default ({ data, location }: IProps) => {
           <NotFound />
         )}
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </>
   );
 };
-// const Food: FC<IProps> = (props) => {
-//   const name = props.location?.search?.split("=")[1]?.replaceAll("-", " ");
-//   const thisFood = data.find((f) => f.name === name);
-//   return (
-//     <>
-//       <main style={{ height: "100vh" }}>
-//         <title>Can I Haz?</title>
-//         <Nav />
-//         <Header food={thisFood !== undefined ? thisFood : undefined} />
-//         {thisFood ? (
-//           <Box pt="2em" pb="2em">
-//             <Center>
-//               <Status status={thisFood.status} />
-//             </Center>
-//             <Center>
-//               <Text fontSize="xl">{thisFood.result}</Text>
-//             </Center>
-//           </Box>
-//         ) : (
-//           <NotFound />
-//         )}
-//       </main>
-//       <footer>
-//         <Footer />
-//       </footer>
-//     </>
-//   );
-// };
-
-// export default Food;
 
 export const query = graphql`
   query($path: String!) {
