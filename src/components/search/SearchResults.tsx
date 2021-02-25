@@ -1,5 +1,5 @@
-import { Box, Text } from "@chakra-ui/react";
 import React, { FC } from "react";
+import { Box, Text } from "@chakra-ui/react";
 import { connectHits, Hits } from "react-instantsearch-dom";
 import Hit, { IHit } from "./Hit";
 import Stats from "./stats";
@@ -16,8 +16,8 @@ const SearchResults: FC<IProps> = ({ hits, handleClose }) => {
       w="100%"
       height="100%"
       left="0%"
-      transition={"bottom 2s ease"}
-      color={"white"}
+      transition="bottom 2s ease"
+      color="white"
       p="1em"
       overflow="auto"
     >
