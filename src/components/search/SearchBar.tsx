@@ -36,7 +36,7 @@ const SearchBar = ({ refine, currentRefinement }: IProps) => {
   const { active, handleFocus, handleClose } = useSearchActivity(refine);
   return (
     <>
-      <Box d={"flex"} w="100%">
+      <Box d="flex" w="100%">
         <SearchBox
           active={active}
           handleClose={handleClose}
